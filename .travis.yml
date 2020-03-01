@@ -21,17 +21,10 @@ before_install:
   - wget https://github.com/aquasecurity/trivy/releases/download/v${VERSION}/trivy_${VERSION}_Linux-64bit.tar.gz
   - tar zxvf trivy_${VERSION}_Linux-64bit.tar.gz
 
-jobs:
-  include:
-    - stage: Compile
-      script: ./mvnw clean compile
-    - stage: Test
-      script: ./mvnw test
-    - stage: Software Dependency Check
-      script: ./mvnw org.owasp:dependency-check-maven:check
-    - stage: Integration Tests
-      script: ./mvnw verify
-    - stage: Build docker image
-      script: ./mvnw jib:dockerBuild
-    - stage: Docker security scan
-      script: ./trivy --exit-code 0 --severity CRITICAL --no-progress myimage:latest
+script:
+  - ./mvnw clean compile
+  - ./mvnw test
+  - ./mvnw org.owasp:dependency-check-maven:check
+  - ./mvnw verify
+  - ./mvnw jib:dockerBuild
+  - ./trivy --exit-code 0 --severity CRITICAL --no-progress myimage:latest
