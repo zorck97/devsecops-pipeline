@@ -6,9 +6,9 @@ services:
 
 addons:
   sonarcloud:
-    organization: "odc"
+    organization: "zorck97"
     token:
-      secure: ""
+      secure: "WDIbM9J1chRH2kKW4rFF9/FWaDwqdJg6bVJ85DV2aQ9UfkP7l9OvU1mTKVoWdrXXkvxuEhEr23Ubnp2HDf1zIJ+hM/WIKND6fOv1qw7O8tWEs2JYR4CUEF+vhtuSxhb5BZnxLpmmZw0C+Rln82wHbxrrO4zXN7Wa+37+a/ir18p0CaJ4txTxUX2LCoyVeBoyynexKq1v9WWRHlb+t4wGrjp55fr6GFzhDZoRgjAZ6Jy6QqV9YLG7yAqlikoKLT4Pvd7Yy+iqqmL7cbyMcWMrpJ+m8aJhC/kIfA3K34H8hT5cYfAXyLv1iTzw4Axn5Gelv45R/L6u0YcPjZPog+FdR4cIfc+QyBdspo1lEBIOLc21Pl2Jv3/F7CpD5hdnyRVHZLTk6mgW0aEIqgshEvJ6E4rlQCtgAlS6vKIN/OWF8eeQOnEc78aaCEDaBHASH/RQTkQqMogy1nKvaRWW66UYzaceU0rRmWcxKhFdj2gZPyAA6OYJIP5jaoxSrVRsUUY539gfbbYEuMsGdC4cHVaZVX/wnoJD+1s7OqyT/6cIfikm7rA3u7EbXiPrhuI9AwK/i/20CBqDz/9MRsE48GGEucPrnYX02O0CfoOtk7rSZ6n39iZWFTgvoc+GIVupqjokkuo9bPlGPZwWLNVIYaVbrlJSL9qqNsOIE+/E51AQPSA="
 
 cache:
   directories:
