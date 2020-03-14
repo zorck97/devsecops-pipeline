@@ -1,4 +1,4 @@
-dist: bionic
+dist: trusty
 sudo: required
 language: java
 services:
@@ -8,7 +8,7 @@ addons:
   sonarcloud:
     organization: "zorck97"
     token:
-      secure: "WDIbM9J1chRH2kKW4rFF9/FWaDwqdJg6bVJ85DV2aQ9UfkP7l9OvU1mTKVoWdrXXkvxuEhEr23Ubnp2HDf1zIJ+hM/WIKND6fOv1qw7O8tWEs2JYR4CUEF+vhtuSxhb5BZnxLpmmZw0C+Rln82wHbxrrO4zXN7Wa+37+a/ir18p0CaJ4txTxUX2LCoyVeBoyynexKq1v9WWRHlb+t4wGrjp55fr6GFzhDZoRgjAZ6Jy6QqV9YLG7yAqlikoKLT4Pvd7Yy+iqqmL7cbyMcWMrpJ+m8aJhC/kIfA3K34H8hT5cYfAXyLv1iTzw4Axn5Gelv45R/L6u0YcPjZPog+FdR4cIfc+QyBdspo1lEBIOLc21Pl2Jv3/F7CpD5hdnyRVHZLTk6mgW0aEIqgshEvJ6E4rlQCtgAlS6vKIN/OWF8eeQOnEc78aaCEDaBHASH/RQTkQqMogy1nKvaRWW66UYzaceU0rRmWcxKhFdj2gZPyAA6OYJIP5jaoxSrVRsUUY539gfbbYEuMsGdC4cHVaZVX/wnoJD+1s7OqyT/6cIfikm7rA3u7EbXiPrhuI9AwK/i/20CBqDz/9MRsE48GGEucPrnYX02O0CfoOtk7rSZ6n39iZWFTgvoc+GIVupqjokkuo9bPlGPZwWLNVIYaVbrlJSL9qqNsOIE+/E51AQPSA="
+      secure: "YendwzOdBDuhUSaJT6D81n0OwLKGmetVMeumxdLl6uZTHRhTg62ur/YYWFLPV3sqIJuYxxG9VbwtA4mrKCAyCP9s1pHfshlY3IujnfvPPmfeC+B5yxj0ZX8xxcS9KXYGbWdTfvftC1VtdgL5sM9dEt0JKCcSLVnFuo7yXH1bHO3mvQ3+INv8QFBxV2wIgGFHEWchuzGDyr0CIy1ebPFJsRA/Ep+oQhqQiEesPRUNWjAH8QbZzFZ1NkKzno2nZigCzFEjMRxhHVJqBxxpcRY0TQYCdaSfUFmp7ytz1Sbag0TI+Cfh7xpPk2fJOe2nvzEqNGDk8J3iUWUbiNwx5gPngPj2cmn8HxU/kv2qE7+sDwfhsZDPKQ2bZE/WZDbf99MM4IucEtMinXSD3ZElb7F7VcwgttCG9J0WvgdHeCofJgh4fmwbjzUyv1ZuoJG0Cham7bwrPcznaG5g91ioqjzRb2piOcWWs5naeEMJehZxlC+hvAIux5jnodR4o5Up42MlEGEFtbrIiijJn/7TUndzf6pnUinuhhqOEDZvfZP1ox+NcB0lyU/7YtOJMKZ5NPX+5dAB0CqD2PkrctlAWMZHvCMmEObmRCinhROHqJqHO205x+ksIyV1Anytv0tsoJxB/NI70VQYKFBQo+uPbloJQsx15s99MwtKboSGT62vtMk="
 
 cache:
   directories:
@@ -16,7 +16,7 @@ cache:
     - "$HOME/.sonar/cache"
     - "$HOME/.cache/trivy"
 
-before_install:
+install:
   - export VERSION=$(curl --silent "https://api.github.com/repos/aquasecurity/trivy/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')
   - wget https://github.com/aquasecurity/trivy/releases/download/v${VERSION}/trivy_${VERSION}_Linux-64bit.tar.gz
   - tar zxvf trivy_${VERSION}_Linux-64bit.tar.gz
