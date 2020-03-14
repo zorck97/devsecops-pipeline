@@ -23,8 +23,6 @@ install:
 
 script:
   - ./mvnw clean compile
-  - ./mvnw test
-  - ./mvnw org.owasp:dependency-check-maven:check
   - ./mvnw verify
-  - ./mvnw jib:dockerBuild
-  - ./trivy --exit-code 0 --severity CRITICAL --no-progress myimage:latest
+  - ./trivy --exit-code 0 --severity MEDIUM,HIGH -f json -o non-critical_vulnerabilities.json --no-progress example-rest-service:latest
+  - ./trivy --exit-code 1 --severity CRITICAL --no-progress example-rest-service:latest
