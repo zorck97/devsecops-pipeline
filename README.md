@@ -21,7 +21,7 @@ DevSecOps related goals
 
 ## Prerequisites
 
-The following tools have to be installed.
+The following tools have to be installed or must be available:
 
 - Java JDK 8
 - Sonarcloud or SonarQube server (local possible)
@@ -54,4 +54,6 @@ Install trivy | Get latest version
 Maven Goals | Run goals clean and compile
 Maven Goal | Run verify goal
 Docker security scan (identify) | Identify medium and high vulnerabilities and save report
-Docker security scan (block) | Identify critical vulnerabilities, fail pipeline if any found 
+Docker security scan (block) | Identify critical vulnerabilities, fail pipeline if any found
+
+Right now the project is configured not to fail, if critical vulnerabilites are found. This can be changed by uncommenting the specific configurations.
