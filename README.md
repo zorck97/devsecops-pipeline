@@ -1,6 +1,7 @@
 # Example DevSecOps pipeline
 
 [![Build Status](https://travis-ci.org/zorck97/gs-rest-service.svg?branch=master)](https://travis-ci.org/zorck97/gs-rest-service)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.example%3Arest-service&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.example%3Arest-service)
 
 ## Introduction
 
@@ -11,8 +12,9 @@ This is an example DevSecOps pipeline which uses [spring-guides/gs-rest-service]
 Overall goals
 
 1. As a developer I should be able to start the build and security checks locally
-2. Build a docker image containing the application
-3. The docker image should not be pushed to a registry
+2. Master first development with no pull requests (this is only an example)
+3. Build a docker image containing the application
+4. The docker image should not be pushed to a registry
 
 DevSecOps related goals
 
