@@ -5,21 +5,23 @@
 
 ## Introduction
 
-This is an example DevSecOps pipeline which uses [spring-guides/gs-rest-service](https://github.com/spring-guides/gs-rest-service). The referenced project was forked to use an existing application as a baseline for a devsecops pipeline.
+This is an example DevSecOps pipeline which uses [github.com/spring-guides/gs-rest-service](https://github.com/spring-guides/gs-rest-service). The referenced project was forked to use an existing application as a baseline for a devsecops pipeline.
 
 ## Goals
 
 Overall goals
 
+1. Simplicity over complexity
 1. As a developer I should be able to start the build and security checks locally
-2. Master first development with no pull requests (this is only an example)
-3. Build a docker image containing the application
-4. The docker image should not be pushed to a registry
+1. Master first development with no pull requests (this is only an example)
+1. Tests will not be added and the quality analysis will be taken as is
+1. Build a docker image containing the application
+1. The docker image should not be pushed to a registry
 
 DevSecOps related goals
 
 1. Check the imported libraries for existing, known vulnerabilities. Let the build fail, if vulnerability with CVSS Score >= 8 is found.
-2. Scan the created docker image and let the build fail, if critical a critical vulnerability was found.
+1. Scan the created docker image and let the build fail, if critical a critical vulnerability was found.
 
 ## Prerequisites
 
