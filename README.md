@@ -1,5 +1,7 @@
 # Example DevSecOps pipeline
 
+[![Build Status](https://travis-ci.org/zorck97/gs-rest-service.svg?branch=master)](https://travis-ci.org/zorck97/gs-rest-service)
+
 ## Introduction
 
 This is an example DevSecOps pipeline which uses [spring-guides/gs-rest-service](https://github.com/spring-guides/gs-rest-service). The referenced project was forked to use an existing application as a baseline for a devsecops pipeline.
