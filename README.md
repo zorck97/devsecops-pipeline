@@ -1,6 +1,6 @@
 # Example DevSecOps pipeline
 
-[![Build Status](https://travis-ci.org/zorck97/devsecops-pipeline.svg?branch=master)](https://travis-ci.org/zorck97/gs-rest-service)
+[![Build Status](https://travis-ci.org/zorck97/devsecops-pipeline.svg?branch=master)](https://travis-ci.org/zorck97/devsecops-pipeline)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.example%3Arest-service&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.example%3Arest-service)
 
 ## Introduction
